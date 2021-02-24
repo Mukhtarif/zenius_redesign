@@ -82,55 +82,57 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            brightness: Brightness.light,
-            backgroundColor: ColorBase.purple,
-            title: Text(
-              "Live Classes",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: Dimension.safeBlockVertical *  3,
-                  fontWeight: FontWeight.w500
+              brightness: Brightness.light,
+              backgroundColor: ColorBase.purple,
+              toolbarHeight: Dimension.safeBlockVertical * 18.5,
+              centerTitle: false,
+              title: Text(
+                "Live Classes",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500
+                ),
               ),
-            ),
-            actions: [
-              GestureDetector(
-                  onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(NavigationConstant.Filter);
-                  },
-                  child: Container(
-                    margin: EdgeInsets.only(
-                        bottom: Dimension.safeBlockVertical * 2,
-                        top: Dimension.safeBlockVertical * 2,
-                        left: Dimension.safeBlockVertical * 2,
-                        right: Dimension.safeBlockVertical * 2),
-                    padding: EdgeInsets.only(
-                        bottom: Dimension.safeBlockVertical,
-                        top: Dimension.safeBlockVertical,
-                        left: Dimension.safeBlockVertical * 2,
-                        right: Dimension.safeBlockVertical * 2),
-                    decoration: BoxDecoration(
-                        color: ColorBase.darkerPurple,
-                        borderRadius: new BorderRadius.circular(8)
-                    ),
-                    child: Row(
-                      children: [
-                        Text(
-                            "Kelas 11 - IPA",
-                            style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 2,
-                                color: ColorBase.orange,
-                                fontWeight: FontWeight.w500
-                            )),
-                        SizedBox(width: Dimension.safeBlockHorizontal * 2,),
-                        Icon(FontAwesomeIcons.caretDown, size: Dimension.safeBlockVertical * 2.5, color: ColorBase.orange)
-                      ],
-                    ),
-                  ))
-            ],
+              actions: [
+                GestureDetector(
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(NavigationConstant.Filter);
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(
+                          bottom: Dimension.safeBlockVertical * 2,
+                          top: Dimension.safeBlockVertical * 2,
+                          left: Dimension.safeBlockVertical * 2,
+                          right: Dimension.safeBlockVertical * 2),
+                      padding: EdgeInsets.only(
+                          bottom: Dimension.safeBlockVertical,
+                          top: Dimension.safeBlockVertical,
+                          left: Dimension.safeBlockVertical * 2,
+                          right: Dimension.safeBlockVertical * 2),
+                      decoration: BoxDecoration(
+                          color: ColorBase.darkerPurple,
+                          borderRadius: new BorderRadius.circular(8)
+                      ),
+                      child: Row(
+                        children: [
+                          Text(
+                              "Kelas 11 - IPA",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 2,
+                                  color: ColorBase.orange,
+                                  fontWeight: FontWeight.w500
+                              )),
+                          SizedBox(width: Dimension.safeBlockHorizontal,),
+                          Icon(FontAwesomeIcons.caretDown, size: Dimension.safeBlockVertical * 2.5, color: ColorBase.orange)
+                        ],
+                      ),
+                    ))
+              ],
             bottom: PreferredSize(
               child: Container(
                 margin: EdgeInsets.all(Dimension.safeBlockVertical * 2),
+                height: Dimension.safeBlockVertical * 6.5,
                 decoration: BoxDecoration(
                   color: ColorBase.darkerPurple,
                   borderRadius: BorderRadius.all(Radius.circular(Dimension.safeBlockHorizontal * 6.5))
@@ -139,7 +141,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                   labelColor: Colors.white,
                   indicatorSize: TabBarIndicatorSize.tab,
                   indicator: new BubbleTabIndicator(
-                    indicatorHeight: Dimension.safeBlockVertical * 6.5,
+                    indicatorHeight: Dimension.safeBlockVertical * 6,
                     indicatorColor: Colors.orange,
                     tabBarIndicatorSize: TabBarIndicatorSize.tab,
                   ),
@@ -150,7 +152,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                   ],
                 ),
               ),
-              preferredSize: Size.fromHeight(70),
+              preferredSize: Size.fromHeight(Dimension.safeBlockVertical * 15),
             )
           ),
           backgroundColor: Colors.white,

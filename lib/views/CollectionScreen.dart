@@ -148,8 +148,9 @@ class _CollectionScreenState extends State<CollectionScreen> {
                           ),
                           Text(
                             "Persamaan Linear Satu Variabel",
+                            maxLines: 2,
                             style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 2,
+                                fontSize: Dimension.safeBlockVertical * 1.75,
                                 fontWeight: FontWeight.w500
                             ),
                           ),
@@ -207,7 +208,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                           Text(
                             "Mutagen",
                             style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 2,
+                                fontSize: Dimension.safeBlockVertical * 1.75,
                                 fontWeight: FontWeight.w500
                             ),
                           ),
@@ -227,7 +228,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                       Text(
                         "Latihan Soal/Ujian",
                         style: TextStyle(
-                            fontSize: Dimension.safeBlockVertical * 2,
+                            fontSize: Dimension.safeBlockVertical * 1.75,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -298,7 +299,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                           Text(
                             "Persamaan Linear Satu Variabel",
                             style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 2,
+                                fontSize: Dimension.safeBlockVertical * 1.75,
                                 fontWeight: FontWeight.w500
                             ),
                           ),
@@ -361,7 +362,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                           Text(
                             "Konsep Dasar Mutasi",
                             style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 2,
+                                fontSize: Dimension.safeBlockVertical * 1.75,
                                 fontWeight: FontWeight.w500
                             ),
                           ),
@@ -424,7 +425,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                           Text(
                             "Pendahuluan",
                             style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 2,
+                                fontSize: Dimension.safeBlockVertical * 1.75,
                                 fontWeight: FontWeight.w500
                             ),
                           ),
@@ -444,7 +445,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
                       Text(
                         "Latihan Soal/Ujian",
                         style: TextStyle(
-                            fontSize: Dimension.safeBlockVertical * 2,
+                            fontSize: Dimension.safeBlockVertical * 1.75,
                             fontWeight: FontWeight.w500
                         ),
                       ),

@@ -20,11 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         brightness: Brightness.light,
         backgroundColor: ColorBase.purple,
+        toolbarHeight: Dimension.safeBlockVertical * 16,
+        centerTitle: false,
         title: Text(
           "Hi Abdur",
           style: TextStyle(
               color: Colors.white,
-              fontSize: Dimension.safeBlockVertical *  3,
               fontWeight: FontWeight.w500
           ),
         ),
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: ColorBase.orange,
                             fontWeight: FontWeight.w500
                         )),
-                    SizedBox(width: Dimension.safeBlockHorizontal * 2,),
+                    SizedBox(width: Dimension.safeBlockHorizontal,),
                     Icon(FontAwesomeIcons.caretDown, size: Dimension.safeBlockVertical * 2.5, color: ColorBase.orange)
                   ],
                 ),
@@ -79,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: searchField(),
             ),
           ),
-          preferredSize: Size.fromHeight(50),
+          preferredSize: Size.fromHeight(Dimension.safeBlockVertical * 10),
         )
       ),
       body: SafeArea(
@@ -141,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "Mata Pelajaran",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -499,7 +500,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Laporan Belajar Mingguan",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontSize: Dimension.safeBlockVertical *  2.5,
+                                fontSize: Dimension.safeBlockVertical *  2,
                                 fontWeight: FontWeight.w500
                             ),
                           ),
@@ -507,7 +508,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             "Selengkapnya",
                             style: TextStyle(
                                 color: ColorBase.lighterBlue,
-                                fontSize: Dimension.safeBlockVertical *  2.25,
+                                fontSize: Dimension.safeBlockVertical *  1.75,
                                 fontWeight: FontWeight.w500
                             ),
                           ),
@@ -636,7 +637,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "Ujian-Ujian",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -759,7 +760,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   "60",
                                   style: TextStyle(
-                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontSize: Dimension.safeBlockVertical * 1.5,
                                       fontWeight: FontWeight.w500
                                   ),
                                 ),
@@ -777,7 +778,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "Latihan Soal Matematika",
                                   style: TextStyle(
-                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontSize: Dimension.safeBlockVertical * 1.75,
                                       fontWeight: FontWeight.w400
                                   ),
                                 ),
@@ -787,7 +788,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "Saintek ST-01",
                                   style: TextStyle(
-                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontSize: Dimension.safeBlockVertical * 1.75,
                                       fontWeight: FontWeight.w400
                                   ),
                                 ),
@@ -801,7 +802,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Text(
                                 "Coba lagi",
                                 style: TextStyle(
-                                    fontSize: Dimension.safeBlockVertical * 2,
+                                    fontSize: Dimension.safeBlockVertical * 1.75,
                                     color: ColorBase.cyan,
                                     fontWeight: FontWeight.w500
                                 ),
@@ -829,7 +830,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Text(
                                   "30",
                                   style: TextStyle(
-                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontSize: Dimension.safeBlockVertical * 1.5,
                                       fontWeight: FontWeight.w500
                                   ),
                                 ),
@@ -847,7 +848,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "Latihan Soal Kimia",
                                   style: TextStyle(
-                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontSize: Dimension.safeBlockVertical * 1.75,
                                       fontWeight: FontWeight.w400
                                   ),
                                 ),
@@ -857,7 +858,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text(
                                   "Saintek ST-01",
                                   style: TextStyle(
-                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontSize: Dimension.safeBlockVertical * 1.75,
                                       fontWeight: FontWeight.w400
                                   ),
                                 ),
@@ -871,7 +872,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Text(
                                 "Coba lagi",
                                 style: TextStyle(
-                                    fontSize: Dimension.safeBlockVertical * 2,
+                                    fontSize: Dimension.safeBlockVertical * 1.75,
                                     color: ColorBase.cyan,
                                     fontWeight: FontWeight.w500
                                 ),
@@ -904,7 +905,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "ZenXplore",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -919,11 +920,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           itemCount: 2,
                           itemBuilder: (context, index) {
                             return Container(
-                              margin:
-                              EdgeInsets.only(right: Dimension.safeBlockVertical * 2),
+                              margin: EdgeInsets.only(right: Dimension.safeBlockVertical * 2),
                               child: Image.asset(
-                                  index == 0 ? "${Environments.imageAssets}IMG_31131.jpg": "${Environments.imageAssets}IMG_3114.jpg"
-                              ),
+                                index == 0 ? "${Environments.imageAssets}IMG_31131.jpg": "${Environments.imageAssets}IMG_3114.jpg",
+                                height: Dimension.safeBlockVertical * 40,
+                                width: Dimension.safeBlockVertical * 35,),
                             );
                           },
                         ),
@@ -935,7 +936,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "Hype Minggu Ini",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -953,7 +954,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               margin:
                               EdgeInsets.only(right: Dimension.safeBlockVertical * 2),
                               child: Image.asset(
-                                  index == 0 ? "${Environments.imageAssets}IMG_3113.jpg": "${Environments.imageAssets}IMG_311411.jpg"
+                                index == 0 ? "${Environments.imageAssets}IMG_3113.jpg": "${Environments.imageAssets}IMG_311411.jpg",
+                                height: Dimension.safeBlockVertical * 40,
+                                width: Dimension.safeBlockVertical * 35,
                               ),
                             );
                           },
@@ -966,7 +969,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "Kelas 5 Menit",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -1016,7 +1019,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "Jadi Jagoan",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -1033,7 +1036,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "Sama-Sama Belajar",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -1051,7 +1054,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               margin:
                               EdgeInsets.only(right: Dimension.safeBlockVertical * 2),
                               child: Image.asset(
-                                  index == 0 ? "${Environments.imageAssets}IMG_3118.jpg": "${Environments.imageAssets}IMG_3119.jpg"
+                                index == 0 ? "${Environments.imageAssets}IMG_3118.jpg": "${Environments.imageAssets}IMG_3119.jpg",
+                                height: Dimension.safeBlockVertical * 40,
+                                width: Dimension.safeBlockVertical * 35,
                               ),
                             );
                           },
@@ -1064,7 +1069,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "Belajar Tematik",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -1072,7 +1077,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: Dimension.safeBlockVertical * 1.5,
                       ),
                       Image.asset(
-                          "${Environments.imageAssets}IMG_31191.jpg"
+                        "${Environments.imageAssets}IMG_31191.jpg",
+                        width: Dimension.screenWidth,
                       ),
                       SizedBox(
                         height: Dimension.safeBlockVertical * 4.5,
@@ -1081,7 +1087,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         "Ekskul Zen",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -1089,16 +1095,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: Dimension.safeBlockVertical * 1.5,
                       ),
                       Image.asset(
-                          "${Environments.imageAssets}IMG_3120.jpg"
+                          "${Environments.imageAssets}IMG_3120.jpg",
+                          width: Dimension.screenWidth,
                       ),
                       SizedBox(
                         height: Dimension.safeBlockVertical * 4.5,
                       ),
                       Text(
-                        "Sama-Sama Belajar",
+                        "Ada apa hari ini",
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: Dimension.safeBlockVertical *  2.5,
+                            fontSize: Dimension.safeBlockVertical *  2,
                             fontWeight: FontWeight.w500
                         ),
                       ),
@@ -1116,7 +1123,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               margin:
                               EdgeInsets.only(right: Dimension.safeBlockVertical * 2),
                               child: Image.asset(
-                                  index == 0 ? "${Environments.imageAssets}IMG_3121.jpg": "${Environments.imageAssets}IMG_3122.jpg"
+                                index == 0 ? "${Environments.imageAssets}IMG_3121.jpg": "${Environments.imageAssets}IMG_3122.jpg",
+                                height: Dimension.safeBlockVertical * 40,
+                                width: Dimension.safeBlockVertical * 35,
                               ),
                             );
                           },
