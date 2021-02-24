@@ -49,7 +49,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             child:  Text(
                               "Batalkan",
                               style: TextStyle(
-                                  fontSize: Dimension.safeBlockVertical * 2.25,
+                                  fontSize: Dimension.safeBlockVertical * 1.75,
                                   fontWeight: FontWeight.bold
                               ),
                             ),
